@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Classic (Retro Welcomeblock)" version="1822">
+<theme name="Classic (Retro Welcomeblock)" version="1823">
 	<properties>
-		<templateset><![CDATA[5]]></templateset>
+		<templateset><![CDATA[4]]></templateset>
 		<editortheme><![CDATA[mybb.css]]></editortheme>
 		<imgdir><![CDATA[themes/classic]]></imgdir>
 		<logo><![CDATA[themes/classic/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:9:"modcp.css";i:7;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1822"><![CDATA[/*
+		<stylesheet name="global.css" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: global.css File
@@ -470,6 +470,9 @@ table {
 	background: #ffdde0;
 }
 
+.thread_start_datetime {
+	color: #999;
+}
 .post.unapproved_post .post_author {
 	border-bottom-color: #ffb8be;
 }
@@ -1853,9 +1856,10 @@ div.jqi .jqisubstate .jqibuttons button {
 }
 
 /** Impromptu End */
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1822"><![CDATA[/*
+		<stylesheet name="css3.css" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: css3.css File
@@ -1916,9 +1920,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1822"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: usercp.css File
@@ -2083,9 +2088,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1822"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: thread_status.css File
@@ -2174,9 +2180,10 @@ a.button {
 }
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1822"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: star_rating.css File
@@ -2281,9 +2288,10 @@ td .star_rating {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1822"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: showthread.css File
@@ -2343,9 +2351,10 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1822"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1823"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: modcp.css File
@@ -2460,6 +2469,7 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
@@ -2544,7 +2554,7 @@ ul.thread_tools li.poll {
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1820"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1823"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -2552,9 +2562,9 @@ ul.thread_tools li.poll {
 <!-- Add Favicon -->
 <link rel="Shortcut icon" href="{$theme['imgdir']}/favicon.ico" />
 
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1820"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
 
 {$stylesheets}
 
