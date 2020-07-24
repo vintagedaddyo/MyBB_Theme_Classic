@@ -25,6 +25,7 @@ Classic v1.1
 
 History:
 
+07/24/2020 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.23
 06/27/2019 — Updated "Classic-theme.xml" file to 1.8.21
 03/02/2019 — Updated "Classic-theme.xml" file to 1.8.20
 09/11/2018 — Updated "Classic-theme.xml" file to 1.8.19
