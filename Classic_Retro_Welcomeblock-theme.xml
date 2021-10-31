@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Classic (Retro Welcomeblock)" version="1824">
+<theme name="Classic (Retro Welcomeblock)" version="1829">
 	<properties>
-		<templateset><![CDATA[2]]></templateset>
+		<templateset><![CDATA[5]]></templateset>
 		<editortheme><![CDATA[mybb.css]]></editortheme>
 		<imgdir><![CDATA[themes/classic]]></imgdir>
 		<logo><![CDATA[themes/classic/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:7:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:9:"modcp.css";i:7;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1824"><![CDATA[/*
+		<stylesheet name="global.css" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: global.css File
@@ -23,6 +23,10 @@
  * Theme Version: 1.1
  * 
  */
+
+.selected {
+	font-weight: bold;
+}
 
 body {
 	background: #efefef;
@@ -121,7 +125,7 @@ a:hover, a:active {
    font-size: 12px;
    border: 1px solid #D4D4D4;
    padding: 8px;
-   margin-bottom: 10px;
+   margin-bottom: 16px;
 }
 
 #panel .upper a.logout {
@@ -1858,9 +1862,10 @@ div.jqi .jqisubstate .jqibuttons button {
 /** Impromptu End */
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1824"><![CDATA[/*
+		<stylesheet name="css3.css" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: css3.css File
@@ -1923,9 +1928,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1824"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: usercp.css File
@@ -2092,9 +2098,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1824"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: thread_status.css File
@@ -2185,9 +2192,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1824"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: star_rating.css File
@@ -2294,9 +2302,10 @@ td .star_rating {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1824"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: showthread.css File
@@ -2358,9 +2367,10 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1824"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1829"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: modcp.css File
@@ -2477,11 +2487,12 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
 	</stylesheets>
 	<templates>
-		<template name="footer" version="1820"><![CDATA[<debugstuff>
+		<template name="footer" version="1829"><![CDATA[<debugstuff>
 	</div>
 </div>
 <div id="footer">
@@ -2515,7 +2526,7 @@ ul.thread_tools li.poll {
 				<!-- Begin Theme Credits -->
 				
 				Theme by: <a href="https://www.mybboard.de/forum/user-5076.html" target="_blank">MrBrechreiz</a>
-				&amp; <a href="http://community.mybb.com/user-6029.html" target="_blank">Vintagedaddyo</a>
+				&amp; <a href="https://github.com/vintagedaddyo/MyBB_Theme_Classic" target="_blank">Vintagedaddyo</a>
 				
                 <!-- End Theme Credits -->
 				
@@ -2561,7 +2572,7 @@ ul.thread_tools li.poll {
 				{$awaitingusers}
 				<navigation>
 				<br />]]></template>
-		<template name="headerinclude" version="1823"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
+		<template name="headerinclude" version="1829"><![CDATA[<link rel="alternate" type="application/rss+xml" title="{$lang->latest_threads} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_threads} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?type=atom1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset={$charset}" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
@@ -2571,14 +2582,42 @@ ul.thread_tools li.poll {
 
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.js?ver=1823"></script>
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/jquery.plugins.min.js?ver=1821"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/general.js?ver=1827"></script>
+
+<!-- welcome usercp select -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("span.userlink a.usercp").each(function () {
+           if (location.href.indexOf(this.href) > -1)
+           {
+                $(this).parent().attr("class", "selected");
+                return false;
+           }
+     });
+});
+</script>
+
+<!-- welcome modcp select -->
+<script type="text/javascript">
+$(document).ready(function(){
+    $("span.modlink a.modcp").each(function () {
+           if (location.href.indexOf(this.href) > -1)
+           {
+                $(this).parent().attr("class", "selected");
+                return false;
+           }
+     });
+});
+</script>
 
 {$stylesheets}
 
 <script type="text/javascript">
 <!--
 	lang.unknown_error = "{$lang->unknown_error}";
-
+	lang.confirm_title = "{$lang->confirm_title}";
+	lang.expcol_collapse = "{$lang->expcol_collapse}";
+	lang.expcol_expand = "{$lang->expcol_expand}";
 	lang.select2_match = "{$lang->select2_match}";
 	lang.select2_matches = "{$lang->select2_matches}";
 	lang.select2_nomatches = "{$lang->select2_nomatches}";
@@ -2637,8 +2676,8 @@ ul.thread_tools li.poll {
 				<script type="text/javascript">
 					$("#quick_login input[name='url']").val($(location).attr('href'));
 				</script>]]></template>
-		<template name="header_welcomeblock_member" version="1822"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
-<span class="welcome">{$lang->welcome_back} ( <a href="{$mybb->settings['bburl']}/usercp.php" class="usercp"><b>{$lang->welcome_usercp}</b></a> — {$modcplink}{$admincplink}<a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout">{$lang->welcome_logout}</a> )  <div class="float_right">{$lang->welcome_current_time}<br /><a id="buddylink" href="javascript:void(0)" onclick="MyBB.popupWindow('{$mybb->settings['bburl']}/misc.php?action=buddypopup&modal=1', null, true); return false;">{$lang->welcome_open_buddy_list}</a></div></span>
+		<template name="header_welcomeblock_member" version="1829"><![CDATA[<!-- Continuation of div(class="upper") as opened in the header template -->
+<span class="welcome">{$lang->welcome_back} ( <span class="userlink"><a href="{$mybb->settings['bburl']}/usercp.php" class="usercp">{$lang->welcome_usercp}</a></span> — {$modcplink}{$admincplink}<a href="{$mybb->settings['bburl']}/member.php?action=logout&amp;logoutkey={$mybb->user['logoutkey']}" class="logout">{$lang->welcome_logout}</a> )  <div class="float_right">{$lang->welcome_current_time}<br /><a id="buddylink" href="javascript:void(0)" onclick="MyBB.popupWindow('{$mybb->settings['bburl']}/misc.php?action=buddypopup&modal=1', null, true); return false;">{$lang->welcome_open_buddy_list}</a></div></span>
 	</div>
 </div>
 <div class="lower">
@@ -2650,7 +2689,7 @@ ul.thread_tools li.poll {
 	</div>
 </div>]]></template>
 		<template name="header_welcomeblock_member_admin" version="1822"><![CDATA[<a href="{$mybb->settings['bburl']}/{$admin_dir}/index.php" class="admincp">{$lang->welcome_admin}</a> —]]></template>
-		<template name="header_welcomeblock_member_moderator" version="1822"><![CDATA[<a href="{$mybb->settings['bburl']}/modcp.php" class="modcp">{$lang->welcome_modcp}</a> —]]></template>
+		<template name="header_welcomeblock_member_moderator" version="1829"><![CDATA[<span class="modlink"><a href="{$mybb->settings['bburl']}/modcp.php" class="modcp">{$lang->welcome_modcp}</a></span> —]]></template>
 		<template name="header_welcomeblock_member_pms" version="1822"><![CDATA[<a href="{$mybb->settings['bburl']}/private.php">{$lang->welcome_pms}</a> {$lang->welcome_pms_usage}]]></template>
 		<template name="header_welcomeblock_member_search" version="1822"><![CDATA[			<a href="{$mybb->settings['bburl']}/search.php?action=getnew">{$lang->welcome_newposts}</a> | 
 			<a href="{$mybb->settings['bburl']}/search.php?action=getdaily">{$lang->welcome_todaysposts}</a> |]]></template>
