@@ -1,11 +1,11 @@
 # MyBB_Theme_Classic
 
-Classic v1.1
+Classic v1.2
 » About:
 
 This a simple classic theme for MyBB enthusiasts.
 
-Classic v1.1
+Classic v1.2
 » Installation:
 
 1.) After downloading the Theme unpack it (with 7-Zip for example)
@@ -15,16 +15,17 @@ Classic v1.1
 5.) Now have fun with your forum!
 
 
-Classic v1.1
+Classic v1.2
 » License:
 
 You may not remove or change the MyBB copyright nor the Designed by: "Vintagedaddyo" or "MrBrechreiz" statements in the footer of this theme's templates. You may use and modify this theme to your personal likings, but redistributing a modified version for download is prohibited, unless you have explicit written permission from "Vintagedaddyo" or "MrBrechreiz", though you are allowed to redistribute a copy that has not been modified.
 
-Classic v1.1
+Classic v1.2
 » Changelog:
 
 History:
 
+11/04/2021 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" to v1.2 (initial responsive implementation)*
 10/30/2021 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.29
 08/10/2020 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.24
 07/24/2020 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.23
@@ -40,3 +41,6 @@ History:
 05/04/2015 — ReadMe Blank initial release
 05/04/2015 — Updated theme ReadMe Blank
 04/20/2006 — Readme Blank initial creation
+
+
+* NOTE: ver 1.1 is now included in documentation directory /1.1/ for 1.8.29 usage for users still desiring only the old v1.1 version and not the current v1.2 and any future changes to such in progress.
