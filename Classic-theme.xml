@@ -918,8 +918,20 @@ blockquote cite span.highlight {
 	color: #A5161A;
 }
 
+.imminent_banned {
+	color: #880000;
+}
+
+.high_banned {
+	color: #FF0000;
+}
+
 .moderate_banned {
-    color: #FF6600;
+	color: #FF6600;
+}
+
+.low_banned {
+	color: #008000;
 }
 
 .high_warning {
@@ -4424,6 +4436,29 @@ img { max-width: 100%; height: auto; }
 <td class="trow2" valign="middle" style="white-space: nowrap; text-align: center;">{$posts} <span class="ucp_show">{$lang->posts}</span></td>
 <td class="trow1" valign="middle" style="white-space: nowrap; text-align: center;">{$threads} <span class="ucp_show">{$lang->threads}</span></td>
 <td class="trow2" valign="middle" style="white-space: nowrap"><span class="ucp_show">{$lang->lastpost}</span>{$lastpost}</td>
+</tr>]]></template>
+		<template name="usercp_latest_threads" version="1829"><![CDATA[<br />
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="6"><div class="float_right"><a href="search.php?action=finduserthreads&amp;uid={$mybb->user['uid']}"><strong>{$lang->find_all_threads}</strong></a></div><strong>{$lang->latest_threads}</strong></td>
+</tr>
+<tr>
+<td class="tcat" colspan="3"><span class="smalltext"><strong>{$lang->thread} / {$lang->author}</strong></span></td>
+<td class="tcat" align="center" width="75"><span class="smalltext"><strong>{$lang->replies}</strong></span></td>
+<td class="tcat" align="center" width="75"><span class="smalltext"><strong>{$lang->views}</strong></span></td>
+<td class="tcat" align="center" width="200"><span class="smalltext"><strong>{$lang->lastpost}</strong></span></td>
+</tr>
+{$latest_threads_threads}
+</table>]]></template>
+		<template name="usercp_latest_threads_threads" version="1829"><![CDATA[<tr>
+<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong> <span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show">{$folder_label}</span></td>
+<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
+<td class="{$bgcolor}">{$gotounread}{$thread['displayprefix']}<span class="smalltext ucp_show"><strong>{$lang->thread}: </strong></span> <a href="{$thread['threadlink']}" class="{$new_class}">{$thread['subject']}</a><br /><span class="smalltext ucp_show"><strong>{$lang->author}: </strong></span> <span class="smalltext">{$thread['author']}</span></td>
+<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->replies}: </strong>&nbsp;</span><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a></td>
+<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->views}: </strong></span> {$thread['views']}</td>
+<td class="{$bgcolor}" style="white-space: nowrap"><span class="smalltext ucp_show"><strong>{$lang->lastpost}: </strong></span> <span class="smalltext">{$lastpostdate}
+<br /><a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+</td>
 </tr>]]></template>
 		<template name="usercp_nav_messenger" version="1829"><![CDATA[<tbody>
 <tr>
