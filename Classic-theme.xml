@@ -4291,10 +4291,10 @@ img { max-width: 100%; height: auto; }
 	{$inline_mod_checkbox}
 </tr>]]></template>
 		<template name="showteam_usergroup_user" version="1829"><![CDATA[<tr>
-<td width="75%" class="{$bgcolor}"><span class="smalltex sthide"><strong>{$lang->username}</strong></span><img src="{$theme['imgdir']}/buddy_{$status}.png" title="{$lang->$status}" alt="{$lang->$status}" style="vertical-align: middle;" /><a href="{$user['profilelink']}"><strong>{$user['username']}</strong></a></td>
-<td width="15%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->lastvisit}</strong></span> {$user['lastvisit']}</td>
-<td width="5%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->email}</strong></span><div class="postbit_buttons">{$emailcode}</div></td>
-<td width="5%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->pm}</strong></span><div class="postbit_buttons">{$pmcode}</div></td>
+<td width="75%" class="{$bgcolor}"><span class="smalltex sthide"><strong>{$lang->username}:</strong></span><img src="{$theme['imgdir']}/buddy_{$status}.png" title="{$lang->$status}" alt="{$lang->$status}" style="vertical-align: middle;" /><a href="{$user['profilelink']}"><strong>{$user['username']}</strong></a></td>
+<td width="15%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->lastvisit}:</strong></span> {$user['lastvisit']}</td>
+<td width="5%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->email}:</strong></span><div class="postbit_buttons">{$emailcode}</div></td>
+<td width="5%" class="{$bgcolor}"><span class="smalltext sthide"><strong>{$lang->pm}:</strong></span><div class="postbit_buttons">{$pmcode}</div></td>
 </tr>]]></template>
 		<template name="smilieinsert" version="1829"><![CDATA[<!--
 <div style="margin:auto; width: 170px; margin-top: 20px;">
@@ -4380,10 +4380,10 @@ img { max-width: 100%; height: auto; }
 </body>
 </html>]]></template>
 		<template name="usercp_attachments_attachment" version="1829"><![CDATA[<tr>
-<td class="{$altbg}" width="1">{$icon} <span class="ucp_show smalltext"><strong>{$lang->post_icon}</strong></span></td>
-<td class="{$altbg}" width="40%"><span class="ucp_show smalltext"><strong>{$lang->attachments_attachment}</strong></span> <a href="attachment.php?aid={$attachment['aid']}" target="_blank">{$attachment['filename']}</a><br /><span class="smalltext">{$sizedownloads}</span></td>
-<td class="{$altbg}"><span class="ucp_show smalltext"><strong>{$lang->attachments_post}</strong></span> <a href="{$attachment['postlink']}#pid{$attachment['pid']}">{$attachment['subject']}</a><br /><span class="smalltext">{$lang->attachment_thread} <a href="{$attachment['threadlink']}">{$attachment['threadsubject']}</a></span></td>
-<td class="{$altbg}" align="center"><span class="ucp_show smalltext"><strong>{$lang->date_uploaded}</strong></span> {$attachdate}</td>
+<td class="{$altbg}" width="1"><span class="ucp_show smalltext"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
+<td class="{$altbg}" width="40%"><span class="ucp_show smalltext"><strong>{$lang->attachments_attachment}:</strong></span> <a href="attachment.php?aid={$attachment['aid']}" target="_blank">{$attachment['filename']}</a><br /><span class="smalltext">{$sizedownloads}</span></td>
+<td class="{$altbg}"><span class="ucp_show smalltext"><strong>{$lang->attachments_post}:</strong></span> <a href="{$attachment['postlink']}#pid{$attachment['pid']}">{$attachment['subject']}</a><br /><span class="smalltext">{$lang->attachment_thread} <a href="{$attachment['threadlink']}">{$attachment['threadsubject']}</a></span></td>
+<td class="{$altbg}" align="center"><span class="ucp_show smalltext"><strong>{$lang->date_uploaded}:</strong></span> {$attachdate}</td>
 <td class="{$altbg}" width="1"><input type="checkbox" class="checkbox" name="attachments[{$attachment['aid']}]" value="{$attachment['aid']}" /></td>
 </tr>]]></template>
 		<template name="usercp_drafts" version="1829"><![CDATA[<html>
@@ -4424,18 +4424,28 @@ img { max-width: 100%; height: auto; }
 </body>
 </html>]]></template>
 		<template name="usercp_drafts_draft" version="1829"><![CDATA[<tr>
-<td class="{$trow}"><span class="ucp_show smalltext"><strong>{$lang->draft_title}</strong></span> <strong>{$draft['subject']}</strong><br /><span class="smalltext">{$detail}</span></td>
-<td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_saved}</strong></span> {$savedate}</td>
-<td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_options}</strong></span> <a href="{$editurl}">{$lang->edit_draft}</a></td>
+<td class="{$trow}"><span class="ucp_show smalltext"><strong>{$lang->draft_title}:</strong></span> <strong>{$draft['subject']}</strong><br /><span class="ucp_show smalltext"><strong>{$lang->details}:</strong></span> <span class="smalltext">{$detail}</span></td>
+<td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_saved}:</strong></span> {$savedate}</td>
+<td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_options}:</strong></span> <a href="{$editurl}">{$lang->edit_draft}</a></td>
 <td class="{$trow}" align="center"><input type="checkbox" class="checkbox" name="deletedraft[{$id}]" value="{$type}" /></td>
 </tr>]]></template>
 		<template name="usercp_forumsubscriptions_forum" version="1829"><![CDATA[<tr>
-<td class="trow1" align="center" valign="middle" width="1"><span class="forum_status forum_{$lightbulb['folder']}" title="{$lightbulb['altonoff']}"></span></td>
-<td class="trow1" valign="middle">
+<td class="trow1" align="center" valign="middle" width="1"><span class="forum_status forum_{$lightbulb['folder']}" title="{$lightbulb['altonoff']}"></span> <span class="smalltext ucp_show"><strong>{$lightbulb['altonoff']}</strong></span></td>
+<td class="trow1" valign="middle"><span class="smalltext ucp_show"><strong>{$lang->forum}:</strong></span>
 <strong><a href="{$forum_url}">{$forum['name']}</a></strong><br /><span class="smalltext"><a href="usercp.php?action=removesubscription&amp;type=forum&amp;fid={$forum['fid']}&amp;my_post_key={$mybb->post_code}">{$lang->unsubscribe}</a> | <a href="newthread.php?fid={$forum['fid']}">{$lang->new_thread}</a></span></td>
-<td class="trow2" valign="middle" style="white-space: nowrap; text-align: center;">{$posts} <span class="ucp_show">{$lang->posts}</span></td>
-<td class="trow1" valign="middle" style="white-space: nowrap; text-align: center;">{$threads} <span class="ucp_show">{$lang->threads}</span></td>
-<td class="trow2" valign="middle" style="white-space: nowrap"><span class="ucp_show">{$lang->lastpost}</span>{$lastpost}</td>
+<td class="trow2" valign="middle" style="white-space: nowrap; text-align: center;"><span class="smalltext ucp_show"><strong>{$lang->posts}:</strong></span> {$posts}</td>
+<td class="trow1" valign="middle" style="white-space: nowrap; text-align: center;"><span class="smalltext ucp_show"><strong>{$lang->threads}:</strong></span> {$threads}</td>
+<td class="trow2" valign="middle" style="white-space: nowrap"><span class="smalltext ucp_show"><strong>{$lang->lastpost}:</strong></span> {$lastpost}</td>
+</tr>]]></template>
+		<template name="usercp_latest_subscribed_threads" version="1829"><![CDATA[<tr>
+<td align="center" class="{$bgcolor}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span></td>
+<td align="center" class="{$bgcolor}" width="2%">{$icon}</td>
+<td class="{$bgcolor}">{$gotounread}{$thread['displayprefix']}<a href="{$thread['threadlink']}" class="{$new_class}">{$thread['subject']}</a><br /><span class="smalltext">{$thread['author']}</span></td>
+<td align="center" class="{$bgcolor}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a></td>
+<td align="center" class="{$bgcolor}">{$thread['views']}</td>
+<td class="{$bgcolor}" style="white-space: nowrap"><span class="smalltext">{$lastpostdate}
+<br /><a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+</td>
 </tr>]]></template>
 		<template name="usercp_latest_threads" version="1829"><![CDATA[<br />
 <table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
@@ -4451,12 +4461,12 @@ img { max-width: 100%; height: auto; }
 {$latest_threads_threads}
 </table>]]></template>
 		<template name="usercp_latest_threads_threads" version="1829"><![CDATA[<tr>
-<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong> <span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show">{$folder_label}</span></td>
-<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
-<td class="{$bgcolor}">{$gotounread}{$thread['displayprefix']}<span class="smalltext ucp_show"><strong>{$lang->thread}: </strong></span> <a href="{$thread['threadlink']}" class="{$new_class}">{$thread['subject']}</a><br /><span class="smalltext ucp_show"><strong>{$lang->author}: </strong></span> <span class="smalltext">{$thread['author']}</span></td>
-<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->replies}: </strong>&nbsp;</span><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a></td>
-<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->views}: </strong></span> {$thread['views']}</td>
-<td class="{$bgcolor}" style="white-space: nowrap"><span class="smalltext ucp_show"><strong>{$lang->lastpost}: </strong></span> <span class="smalltext">{$lastpostdate}
+<td align="center" class="{$bgcolor}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="smalltext ucp_show"><strong>{$folder_label}</strong></span></td>
+<td align="center" class="{$bgcolor}" width="2%"><span class="smalltext ucp_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
+<td class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->thread}:</strong></span> {$gotounread}{$thread['displayprefix']}<a href="{$thread['threadlink']}" class="{$new_class}">{$thread['subject']}</a><br /><span class="smalltext ucp_show"><strong>{$lang->author}:</strong></span> <span class="smalltext">{$thread['author']}</span></td>
+<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->replies}:</strong></span> <a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a></td>
+<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->views}:</strong></span> {$thread['views']}</td>
+<td class="{$bgcolor}" style="white-space: nowrap"><span class="smalltext ucp_show"><strong>{$lang->lastpost}:</strong></span> <span class="smalltext">{$lastpostdate}
 <br /><a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
 </td>
 </tr>]]></template>
@@ -4570,6 +4580,18 @@ img { max-width: 100%; height: auto; }
 	{$footer}
 </body>
 </html>]]></template>
+		<template name="usercp_subscriptions_thread" version="1829"><![CDATA[<tr>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="smalltext ucp_show"><strong>{$folder_label}</strong></span> </td>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="smalltext ucp_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
+	<td class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->thread}:</strong></span>   {$gotounread}{$thread['threadprefix']}<a href="{$thread['threadlink']}" class="{$new_class}">{$thread['subject']}</a><br /><span class="smalltext">{$lang->notification_method} {$notification_type}</span></td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->replies}:</strong></span> <a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a></td>
+	<td align="center" class="{$bgcolor}"><span class="smalltext ucp_show"><strong>{$lang->views}:</strong></span> {$thread['views']}</td>
+	<td class="{$bgcolor}" style="white-space: nowrap"><span class="smalltext ucp_show"><strong>{$lang->lastpost}:</strong></span>
+		<span class="smalltext">{$lastpostdate}<br />
+		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+	</td>
+	<td class="{$bgcolor}" align="center"><input type="checkbox" class="checkbox" name="check[{$thread['tid']}]" value="{$thread['tid']}" /></td>
+</tr>]]></template>
 		<template name="warnings_view" version="1829"><![CDATA[<html>
 <head>
 	<title>{$mybb->settings['bbname']} - {$lang->warning_log}</title>
