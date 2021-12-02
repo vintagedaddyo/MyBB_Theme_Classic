@@ -4386,6 +4386,99 @@ img { max-width: 100%; height: auto; }
 <td class="{$altbg}" align="center"><span class="ucp_show smalltext"><strong>{$lang->date_uploaded}:</strong></span> {$attachdate}</td>
 <td class="{$altbg}" width="1"><input type="checkbox" class="checkbox" name="attachments[{$attachment['aid']}]" value="{$attachment['aid']}" /></td>
 </tr>]]></template>
+		<template name="usercp_avatar" version="1829"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->change_avatar}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<form enctype="multipart/form-data" action="usercp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<table width="100%" border="0" align="center">
+<tr>
+	{$usercpnav}
+	<td valign="top">
+		{$avatar_error}
+		<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+			<tr>
+				<td class="thead" colspan="2"><strong>{$lang->change_avatar}</strong></td>
+			</tr>
+			<tr>
+				<td class="trow1" colspan="2">
+					<table cellspacing="0" cellpadding="0" width="100%">
+						<tr>
+							<td>{$lang->avatar_note}{$avatarmsg}</td>
+							{$currentavatar}
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="tcat cpshow" colspan="2"><strong>{$lang->custom_avatar}</strong></td>
+			</tr>
+			{$avatarupload}
+			{$avatar_remote}
+		</table>
+
+		<br />
+		<div align="center">
+			<input type="hidden" name="action" value="do_avatar" />
+			<input type="submit" class="button" name="submit" value="{$lang->change_avatar}" />
+			{$removeavatar}
+		</div>
+	</td>
+</tr>
+</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
+		<template name="usercp_changename" version="1829"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->change_username}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<form action="usercp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+{$errors}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="2"><strong>{$lang->change_username}</strong></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->password_confirmation}</strong></td>
+</tr>
+<tr>
+<td class="trow1" width="40%"><strong>{$lang->current_password}</strong></td>
+<td class="trow1" width="60%"><input type="password" class="textbox" name="password" size="25" /></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->change_username}</strong></td>
+</tr>
+<tr>
+<td class="trow2" width="40%"><strong>{$lang->new_username}</strong></td>
+<td class="trow2" width="60%"><input type="text" class="textbox" name="username" size="25" maxlength="{$mybb->settings['maxnamelength']}" value="{$username}" /></td>
+</tr>
+</table>
+<br />
+<div align="center">
+<input type="hidden" name="action" value="do_changename" />
+<input type="submit" class="button" name="submit" value="{$lang->update_username}" />
+</div>
+</td>
+</tr>
+</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
 		<template name="usercp_drafts" version="1829"><![CDATA[<html>
 <head>
 <title>{$mybb->settings['bbname']} - {$lang->drafts}</title>
@@ -4429,6 +4522,83 @@ img { max-width: 100%; height: auto; }
 <td class="{$trow}" align="center"><span class="ucp_show smalltext"><strong>{$lang->draft_options}:</strong></span> <a href="{$editurl}">{$lang->edit_draft}</a></td>
 <td class="{$trow}" align="center"><input type="checkbox" class="checkbox" name="deletedraft[{$id}]" value="{$type}" /></td>
 </tr>]]></template>
+		<template name="usercp_editlists_received_request" version="1829"><![CDATA[<tr>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->from}:</strong></span>
+		{$request['username']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->date}:</strong></span>
+		{$request['date']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->options}:</strong></span>
+		<a href="{$mybb->settings['bburl']}/usercp.php?action=acceptrequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->accept}</a> - <a href="{$mybb->settings['bburl']}/usercp.php?action=declinerequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->decline}</a>
+	</td>
+</tr>]]></template>
+		<template name="usercp_editlists_sent_request" version="1829"><![CDATA[<tr>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->to}:</strong></span>
+		{$request['username']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->date}:</strong></span>
+		{$request['date']}
+	</td>
+	<td class="{$bgcolor}">
+		<span class="ucp_show smalltext"><strong>{$lang->options}:</strong></span>
+		<a href="{$mybb->settings['bburl']}/usercp.php?action=cancelrequest&amp;id={$request['id']}&amp;my_post_key={$mybb->post_code}">{$lang->cancel}</a>
+	</td>
+</tr>]]></template>
+		<template name="usercp_email" version="1829"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->change_email}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<form action="usercp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+{$errors}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="2"><strong>{$lang->change_email}</strong></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->password_confirmation}</strong></td>
+</tr>
+<tr>
+<td class="trow2" width="40%"><strong>{$lang->current_password}</strong></td>
+<td class="trow1" width="60%"><input type="password" class="textbox" name="password" size="25" /></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->please_enter_confirm_new_email}</strong></td>
+</tr>
+<tr>
+<td class="trow2" width="40%"><strong>{$lang->new_email}</strong></td>
+<td class="trow2" width="60%"><input type="text" class="textbox" name="email" size="25" maxlength="150" value="{$email}" /></td>
+</tr>
+<tr>
+<td class="trow1" width="40%"><strong>{$lang->confirm_email}</strong></td>
+<td class="trow1" width="60%"><input type="text" class="textbox" name="email2" size="25" maxlength="150" value="{$email2}" /></td>
+</tr>
+</table>
+<br />
+<div align="center">
+<input type="hidden" name="action" value="do_email" />
+<input type="submit" class="button" name="submit" value="{$lang->update_email}" />
+</div>
+</td>
+</tr>
+</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
 		<template name="usercp_forumsubscriptions_forum" version="1829"><![CDATA[<tr>
 <td class="trow1" align="center" valign="middle" width="1"><span class="forum_status forum_{$lightbulb['folder']}" title="{$lightbulb['altonoff']}"></span> <span class="smalltext ucp_show"><strong>{$lightbulb['altonoff']}</strong></span></td>
 <td class="trow1" valign="middle"><span class="smalltext ucp_show"><strong>{$lang->forum}:</strong></span>
@@ -4524,6 +4694,55 @@ img { max-width: 100%; height: auto; }
 	</td></tr>
 	<tr><td class="trow1 smalltext"><a href="usercp.php?action=options" class="usercp_nav_item usercp_nav_options">{$lang->ucp_nav_edit_options}</a></td></tr>
 </tbody>]]></template>
+		<template name="usercp_password" version="1829"><![CDATA[<html>
+<head>
+<title>{$mybb->settings['bbname']} - {$lang->change_password}</title>
+{$headerinclude}
+</head>
+<body>
+{$header}
+<form action="usercp.php" method="post">
+<input type="hidden" name="my_post_key" value="{$mybb->post_code}" />
+<table width="100%" border="0" align="center">
+<tr>
+{$usercpnav}
+<td valign="top">
+{$errors}
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+<tr>
+<td class="thead" colspan="2"><strong>{$lang->change_password}</strong></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->password_confirmation}</strong></td>
+</tr>
+<tr>
+<td class="trow1" width="40%"><strong>{$lang->current_password}</strong></td>
+<td class="trow1" width="60%"><input type="password" class="textbox" name="oldpassword" size="25" /></td>
+</tr>
+<tr>
+<td class="tcat cpshow" colspan="2"><strong>{$lang->please_enter_confirm_new_password}</strong></td>
+</tr>
+<tr>
+<td class="trow2" width="40%"><strong>{$lang->new_password}</strong></td>
+<td class="trow2" width="60%"><input type="password" class="textbox" name="password" size="25" /></td>
+</tr>
+<tr>
+<td class="trow1" width="40%"><strong>{$lang->confirm_password}</strong></td>
+<td class="trow1" width="60%"><input type="password" class="textbox" name="password2" size="25" /></td>
+</tr>
+</table>
+<br />
+<div align="center">
+<input type="hidden" name="action" value="do_password" />
+<input type="submit" class="button" name="submit" value="{$lang->update_password}" />
+</div>
+</td>
+</tr>
+</table>
+</form>
+{$footer}
+</body>
+</html>]]></template>
 		<template name="usercp_subscriptions" version="1829"><![CDATA[<html>
 <head>
 	<title>{$mybb->settings['bbname']} - {$lang->subscriptions}</title>
@@ -4591,6 +4810,11 @@ img { max-width: 100%; height: auto; }
 		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
 	</td>
 	<td class="{$bgcolor}" align="center"><input type="checkbox" class="checkbox" name="check[{$thread['tid']}]" value="{$thread['tid']}" /></td>
+</tr>]]></template>
+		<template name="usercp_usergroups_memberof_usergroup" version="1829"><![CDATA[<tr>
+<td class="{$trow}"><span class="smalltext ucp_show"><strong>{$lang->usergroups_usergroup}:</strong></span> <strong> {$usergroup['title']}</strong> {$displaycode}{$description}</td>
+<td class="{$trow}" align="center"><span class="smalltext ucp_show"><strong>{$lang->usertitle}:</strong></span> {$usergroup['usertitle']}</td>
+<td class="{$trow}"><span class="smalltext ucp_show"><strong>{$lang->usergroup_leave}:</strong></span> {$leavelink}</td>
 </tr>]]></template>
 		<template name="warnings_view" version="1829"><![CDATA[<html>
 <head>
