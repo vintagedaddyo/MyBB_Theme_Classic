@@ -1978,8 +1978,6 @@ a.button {
 	background: #fff;	
 }
 
-/*@media only screen and (max-width: 420px) {}*/
-
 @media (max-width: 768px) {
 	
 .post.classic {
@@ -2040,13 +2038,10 @@ body {
 	background-color: unset !important;
 }
 
-/* remove border and reset width margin and padding */
+/* remove border */
 	
 #container { 
-	min-width: 90% !important;	
 	border: unset !important;
-	padding: 6px !important;
-    margin: 6px !important;	
 }	
 	
 /* fphide span for mobile */
@@ -2316,7 +2311,17 @@ form#ignored {
 }
 }
 
+
 @media (max-width:360px) {
+
+/* unset width margin and padding */	
+	
+#container { 
+	width:unset !important;
+	border: unset !important;
+	padding: unset !important;
+    margin:  unset !important;
+}	
 		
 /* select tweaks */
 	

@@ -1975,8 +1975,6 @@ a.button {
 	background: #fff;	
 }
 
-/*@media only screen and (max-width: 420px) {*/
-
 @media (max-width: 768px) {
 	
 .post.classic {
@@ -2034,13 +2032,10 @@ body {
 	background-color: unset !important;
 }
 
-/* remove border and reset width margin and padding */
+/* remove border */
 	
 #container { 
-	min-width: 90% !important;	
 	border: unset !important;
-	padding: 6px !important;
-    margin: 6px !important;
 }	
 
 /* top search mobile float and text */
@@ -2318,6 +2313,15 @@ form#ignored {
 }
 
 @media (max-width:360px) {
+
+/* unset width margin and padding */	
+	
+#container { 
+	width:unset !important;
+	border: unset !important;
+	padding: unset !important;
+    margin:  unset !important;
+}	
 	
 /* select tweaks */
 	
@@ -2612,7 +2616,9 @@ select {
 .weekday_day_height {
     height: 30px;  
 }
-}]]>
+}
+
+/* end */	]]>
 		</stylesheet>
 		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1829"><![CDATA[/*
  * MyBB: Classic Frontend Theme 
