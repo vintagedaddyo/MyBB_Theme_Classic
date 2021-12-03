@@ -3617,7 +3617,7 @@ table td {
 <td class="{$bgcolor}" align="right" style="white-space: nowrap"><span class="smalltext last_post_show"><strong>{$lang->forumbit_lastpost}:</strong></span> {$lastpost}</td>
 </tr>]]></template>
 		<template name="forumdisplay_thread" version="1829"><![CDATA[<tr class="inline_row">
-	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span><span class="folder_show"> {$folder_label}</span></td>
+	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span><span class="folder_show"> {$folder_label}</span></td>
 	<td align="center" class="{$bgcolor}{$thread_type_class}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span>{$icon}</td>
 	<td class="{$bgcolor}{$thread_type_class}">
 		{$attachment_count}
