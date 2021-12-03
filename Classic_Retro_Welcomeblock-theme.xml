@@ -2175,6 +2175,12 @@ form#ignored {
      display: block !important; 
 }
 	
+/* Search Results check tcat display */
+	
+.srcshow {
+     display: block !important; 
+}
+	
 /* whosonline tcat  display */	
 	
 .wolshow {
@@ -4314,8 +4320,9 @@ img { max-width: 100%; height: auto; }
 <td class="trow2" align="right"><span class="ucp_show smalltext"><strong>{$lang->datesent}</strong></span> <span class="smalltext">{$senddate}</span></td>
 <td class="trow1"><input type="checkbox" class="checkbox" name="unreadcheck[{$unreadmessage['pmid']}]" value="1" /></td>
 </tr>]]></template>
+		<template name="search_results_inlinemodcol" version="1829"><![CDATA[<td class="tcat srcshow" align="center" width="1"><input type="checkbox" name="allbox" onclick="inlineModeration.checkAll(this);" /></td>]]></template>
 		<template name="search_results_posts_post" version="1829"><![CDATA[<tr class="inline_row">
-	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span><span class="folder_show"> {$folder_label}</span></td>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show"> {$folder_label}</span></td>
 	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
 	<td class="{$bgcolor}">
 		<span class="smalltext slhide"><strong><a href="{$sorturl}&amp;sortby=subject&amp;order=asc">{$lang->post}:</a> {$orderarrow['subject']}</strong></span><br />
@@ -4333,7 +4340,7 @@ img { max-width: 100%; height: auto; }
 	{$inline_mod_checkbox}
 </tr>]]></template>
 		<template name="search_results_threads_thread" version="1829"><![CDATA[<tr class="inline_row">
-	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span><span class="folder_show"> {$folder_label}</span></td>
+	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->thread}:</strong></span><span class="thread_status {$folder}" title="{$folder_label}">&nbsp;</span> <span class="folder_show"> {$folder_label}</span></td>
 	<td align="center" class="{$bgcolor}" width="2%"><span class="post_icon_show"><strong>{$lang->post_icon}</strong></span> {$icon}</td>
 	<td class="{$bgcolor}">
 		{$attachment_count}
