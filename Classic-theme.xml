@@ -2580,7 +2580,37 @@ select {
 [title="Sabato"]:after {
     content: 'Sab';
 }
+	
+/* German */
 
+[title="Sonntag"]:after {
+    content: 'Son';
+}
+
+[title="Montag"]:after {
+    content: 'Mon';
+}
+
+[title="Dienstag"]:after {
+    content: 'Die';
+}
+
+[title="Mittwoch"]:after {
+    content: 'Mit';
+}
+
+[title="Donnerstag"]:after {
+    content: 'Don';
+}
+
+[title="Freitag"]:after {
+    content: 'Frei';
+}
+
+[title="Samstag"]:after {
+    content: 'Sam';
+}
+	
 /* add your additional langs here */
 
 .weekday_day_height {
