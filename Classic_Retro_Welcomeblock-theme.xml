@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<theme name="Classic (Retro Welcomeblock)" version="1829">
+<theme name="Classic (Retro Welcomeblock)" version="1830">
 	<properties>
-		<templateset><![CDATA[5]]></templateset>
+		<templateset><![CDATA[3]]></templateset>
 		<editortheme><![CDATA[mybb.css]]></editortheme>
 		<imgdir><![CDATA[themes/classic]]></imgdir>
 		<logo><![CDATA[themes/classic/logo.png]]></logo>
@@ -11,7 +11,7 @@
 		<disporder><![CDATA[a:8:{s:10:"global.css";i:1;s:8:"css3.css";i:2;s:10:"usercp.css";i:3;s:17:"thread_status.css";i:4;s:16:"star_ratings.css";i:5;s:14:"showthread.css";i:6;s:9:"modcp.css";i:7;s:10:"extras.css";i:8;}]]></disporder>
 	</properties>
 	<stylesheets>
-		<stylesheet name="global.css" version="1829"><![CDATA[/*
+		<stylesheet name="global.css" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: global.css File
@@ -1875,9 +1875,10 @@ div.jqi .jqisubstate .jqibuttons button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="css3.css" version="1829"><![CDATA[/*
+		<stylesheet name="css3.css" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: css3.css File
@@ -1941,9 +1942,10 @@ a.button {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="extras.css" version="1829"><![CDATA[/*
+		<stylesheet name="extras.css" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: extras.css File
@@ -2651,9 +2653,10 @@ select {
 }
 }
 
-/* end */]]>
+/* end */
+		]]>
 		</stylesheet>
-		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1829"><![CDATA[/*
+		<stylesheet name="usercp.css" attachedto="usercp.php|usercp2.php|private.php" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: usercp.css File
@@ -2821,9 +2824,10 @@ select {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1829"><![CDATA[/*
+		<stylesheet name="thread_status.css" attachedto="forumdisplay.php|usercp.php|search.php" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: thread_status.css File
@@ -2915,9 +2919,10 @@ select {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1829"><![CDATA[/*
+		<stylesheet name="star_ratings.css" attachedto="forumdisplay.php|showthread.php" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: star_rating.css File
@@ -3025,9 +3030,10 @@ td .star_rating {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="showthread.css" attachedto="showthread.php" version="1829"><![CDATA[/*
+		<stylesheet name="showthread.css" attachedto="showthread.php" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: showthread.css File
@@ -3090,9 +3096,10 @@ ul.thread_tools li.poll {
 		
 		
 		
+		
 		]]>
 		</stylesheet>
-		<stylesheet name="modcp.css" attachedto="modcp.php" version="1829"><![CDATA[/*
+		<stylesheet name="modcp.css" attachedto="modcp.php" version="1830"><![CDATA[/*
  * MyBB: Classic (Retro Welcomeblock) Frontend Theme 
  *
  * File: modcp.css File
@@ -3203,6 +3210,7 @@ ul.thread_tools li.poll {
 	text-decoration: none;
 }
 	
+		
 		
 		
 		

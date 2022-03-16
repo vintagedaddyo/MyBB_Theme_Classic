@@ -24,7 +24,8 @@ Classic v1.2
 » Changelog:
 
 History:
-
+03/16/2022 - Updated "Classic_1.1-theme.xml and Classic_1.1_Retro_Welcomeblock-theme.xml" file to 1.8.30
+03/16/2022 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.30
 11/04/2021 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" to v1.2 (initial responsive implementation)*
 10/30/2021 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.29
 08/10/2020 - Updated "Classic-theme.xml and Classic_Retro_Welcomeblock-theme.xml" file to 1.8.24
